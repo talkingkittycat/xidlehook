@@ -407,6 +407,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a1d01941d82fa2ab50be1e79e6714289dd7cde78eba4c074bc5a4374f650dfe0"
 
 [[package]]
+name = "quick-xml"
+version = "0.22.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8533f14c8382aaad0d592c812ac3b826162128b65662331e1127b45c3d18536b"
+dependencies = [
+ "memchr",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -766,6 +775,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "xcb"
+version = "0.10.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "771e2b996df720cd1c6dd9ff90f62d91698fd3610cc078388d0564bdd6622a9c"
+dependencies = [
+ "libc",
+ "log",
+ "quick-xml",
+ "x11",
+]
+
+[[package]]
 name = "xidlehook"
 version = "0.10.0"
 dependencies = [
@@ -777,7 +798,7 @@ dependencies = [
  "serde_json",
  "structopt",
  "tokio 1.19.2",
- "xcb",
+ "xcb 0.10.1",
  "xidlehook-core",
 ]
 
@@ -792,5 +813,5 @@ dependencies = [
  "nix",
  "structopt",
  "tokio 0.2.25",
- "xcb",
+ "xcb 0.9.0",
 ]
